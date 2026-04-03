@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChicoTV+ | Conectar Dispositivo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-overlay"></div>
+    
+    <main class="container">
+        <header class="logo-section">
+            <h1 class="logo">ChicoTV<span>+</span></h1>
+            <p class="subtitle">Conecte sua conta à sua Smart TV</p>
+        </header>
+
+        <section class="card glass">
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="tvCode">Código da TV</label>
+                    <input type="text" id="tvCode" placeholder="000000" maxlength="6" required>
+                    <small>Digite o código de 6 dígitos que aparece na sua TV</small>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="input-group">
+                    <label for="username">Usuário</label>
+                    <input type="text" id="username" placeholder="Seu usuário" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Sua senha" required>
+                </div>
+
+                <button type="submit" id="submitBtn" class="btn-primary">
+                    <span class="btn-text">CONECTAR AGORA</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </form>
+
+            <div id="statusMessage" class="status-message"></div>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2024 ChicoTV+. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+
+    <!-- Firebase SDK (Modular) -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
