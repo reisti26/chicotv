@@ -4,6 +4,7 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.7.1
 const firebaseConfig = {
     apiKey: "AIzaSyD2R4znYhhF32Ae_AUmKnvCvElrYL_Wxk0",
     authDomain: "chico-tv-plus.firebaseapp.com",
+    databaseURL: "https://chico-tv-plus-default-rtdb.firebaseio.com", // Substitua pela sua URL real se for diferente
     projectId: "chico-tv-plus",
     storageBucket: "chico-tv-plus.firebasestorage.app",
     messagingSenderId: "715193629363",
@@ -63,7 +64,7 @@ loginForm.addEventListener('submit', async (e) => {
         
     } catch (error) {
         console.error("Erro ao enviar dados:", error);
-        showStatus('Falha ao conectar. Verifique sua conexão.', 'error');
+        showStatus('Erro: ' + error.message, 'error');
     } finally {
         setLoading(false);
     }
